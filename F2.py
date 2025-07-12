@@ -3,7 +3,7 @@ import csv
 import subprocess
 
 if len(sys.argv) < 2:
-    print ('Usage: python3 F2.py [basename]; calculates F2 sites shared within and between pre-defined groups (denoted in a "pops" file); email kevinwwann@gmail.com if you have issues')
+    print ('Usage: python3 F2.py [basename]; calculates F2 sites shared within and between pre-defined groups; requires a "pops" no-header tsv file that has individual names in col-1 and pop names in col-2; email kevinwwann@gmail.com if you have issues')
     sys.exit(1)
 
 
