@@ -14,7 +14,7 @@ with open("../variants/output/"+sys.argv[1]+".tped",'r') as myfile: ## modify th
     for row in csv_reader:
         templist = []
         templist1 = []
-        templist.append(row[4:])
+        templist.append(row[0].split()[4:])
         for x in range(0,len(templist[0])-1):
             if x % 2 != 0:
                 templist1.append(templist[0][x])
