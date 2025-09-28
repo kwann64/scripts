@@ -3,7 +3,7 @@ import csv
 import subprocess
 
 if len(sys.argv) < 2:
-    print ('Usage: python3 F2.py [basename]; calculates F2 sites shared within and between pre-defined groups (denoted in a "pops" file); email kevinwwann@gmail.com if you have issues')
+    print ('Usage: python3 F2.py [basename]; calculates F2 sites shared within and between pre-defined groups; requires a "pops" no-header tsv file that has individual names in col-1 and pop names in col-2; email kevinwwann@gmail.com if you have issues')
     sys.exit(1)
 
 
@@ -14,7 +14,7 @@ with open("../variants/output/"+sys.argv[1]+".tped",'r') as myfile: ## modify th
     for row in csv_reader:
         templist = []
         templist1 = []
-        templist.append(row[4:])
+        templist.append(row[0].split()[4:])
         for x in range(0,len(templist[0])-1):
             if x % 2 != 0:
                 templist1.append(templist[0][x])
